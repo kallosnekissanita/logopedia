@@ -10,17 +10,27 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #fafafa;
+      /* Türkízkékes-zöldes háttér */
+      background: linear-gradient(135deg, #40E0D0, #3CB371);
     }
     header {
       background-color: #f4f4f4;
       padding: 20px;
       text-align: center;
     }
+    header img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
     main {
       padding: 20px;
       max-width: 800px;
       margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 5px;
     }
     section {
       margin-bottom: 30px;
@@ -34,30 +44,6 @@
     }
     a:hover {
       text-decoration: underline;
-    }
-    .contact-form {
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0 15px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
     }
     footer {
       background-color: #f4f4f4;
@@ -73,6 +59,7 @@
 </head>
 <body>
   <header>
+    <img src="https://via.placeholder.com/1200x300?text=Kall%C3%B3sne+Kiss+Anita" alt="Kallósné Kiss Anita">
     <h1>Üdvözlöm a logopédiai honlapomon!</h1>
   </header>
   <main>
@@ -87,85 +74,7 @@
         Honlapomon számos hasznos információt fogok feltölteni a logopédiai terápiával kapcsolatban. Emellett gyakorlati tanácsokkal, otthon is alkalmazható gyakorlatokkal, valamint a gyermekek fejlődését elősegítő információkkal, játékötletekkel igyekszem támogatni Önöket a mindennapokban.
       </p>
       <p>
-        Bízom benne, hogy a honlapom segítségével könnyebben eligazodnak majd a logopédia világában, és hasznosnak találják az itt megosztott tudnivalókat. Kérem, ne habozzanak felvenni velem a kapcsolatot bármilyen kérdéssel vagy észrevétellel, hiszen közös célunk a gyermekek harmonikus fejlődése és boldogulása.
+        Bízom benne, hogy a honlapom segítségével könnyebben eligazodnak majd a logopédia világában, és hasznosnak találják az itt megosztott tudnivalókat. Kérem, ne habozzanak felvenni velem a kapcsolatot bármilyen kérdéssel vagy észrevétellel, hiszen közös célunk a gyermekek harmonikus fejlődés és boldogulása.
       </p>
       <p>
-        Köszönöm, hogy meglátogatták az oldalam, és bízom benne, hogy hasznosnak találják majd az itt található tartalmakat!
-      </p>
-      <p>
-        <strong>Üdvözlettel,</strong><br>
-        Kallósné Kiss Anita<br>
-        gyógypedagógus-logopédus, szakvizsgázott magyar nyelv és irodalom szakos bölcsész és tanár, hittanár
-      </p>
-    </section>
-
-    <section class="ethics">
-      <h3>Etikai Nyilatkozat</h3>
-      <p>
-        Az etikai nyilatkozat tartalma itt található.<br>
-        Diplomaszám: <span style="letter-spacing: 0.3em;">**********</span>
-      </p>
-    </section>
-
-    <section>
-      <h3>Profilom</h3>
-      <p>
-        Nézze meg profilomat a <a href="https://www.logopeduskereso.hu/logopedus/kallosne-kiss-anita/" target="_blank">Logopéduskeresőn</a>.
-      </p>
-    </section>
-
-    <section>
-      <h3>Honlapajánló</h3>
-      <ul>
-        <li><a href="https://dumcsifuzetek.hu/" target="_blank">dumcsifuzetek.hu</a></li>
-        <li><a href="https://www.iskolasnaklennijo.hu/" target="_blank">iskolasnaklennijo.hu</a></li>
-        <li><a href="https://skillo.hu/" target="_blank">skillo.hu</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Nyelvtorna</h3>
-      <p>
-        Nézze meg a nyelvtorna videókat a következő YouTube lejátszási listán: 
-        <a href="https://www.youtube.com/playlist?list=PLqUxAJqVKZOjXVz9M9AfLrTqmTYYzNMHw" target="_blank">YouTube Nyelvtorna</a>
-      </p>
-    </section>
-
-    <section>
-      <h3>Kapcsolat</h3>
-      <div class="contact-form">
-        <form id="contactForm">
-          <label for="name">Név:</label>
-          <input type="text" id="name" name="name" required>
-          
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="message">Üzenet:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-          
-          <button type="submit">Küldés</button>
-        </form>
-        <div id="formResponse" style="display:none; margin-top: 10px; color: green;">
-          Üzenetét sikeresen elküldtük!
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Kallósné Kiss Anita</p>
-  </footer>
-
-  <script>
-    // Egyszerű üzenetküldő űrlap kezelése
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      // Itt lehetőség van a form adatainak további feldolgozására (pl. küldés egy külső API-nak)
-      document.getElementById('formResponse').style.display = 'block';
-      // Űrlap mezők törlése
-      document.getElementById('contactForm').reset();
-    });
-  </script>
-</body>
-</html>
+        Köszönöm, hogy meglátogatták az oldalam, és bízom benne, hogy hasznosnak találják majd
